@@ -42,10 +42,10 @@ class LinkedList:
         while current is not None: 
             if current.value < x: 
                 pointer_lower.next = current
-                pointer_lower = current
+                pointer_lower = pointer_lower.next
             elif current.value >= x: 
                 pointer_higher.next = current
-                pointer_higher = current
+                pointer_higher = pointer_higher.next
             current = current.next
         pointer_lower.next = None 
         pointer_higher.next = None
